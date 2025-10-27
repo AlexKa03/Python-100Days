@@ -1,3 +1,7 @@
+# Keep in mind that the if you open the whole project folder in your IDE, the open will result in errors
+# because the working directory will be the project root folder, not the current folder of this file.
+# Workaraund, either open the terminal in the folder where root is or provide the relative path to the file.
+
 PLACEHOLDER = "[name]"
 
 # Extracting the names
