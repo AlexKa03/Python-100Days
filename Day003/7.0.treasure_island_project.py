@@ -1,3 +1,8 @@
+# Your goal today is to build a "Chose your own adventure game". Using what you have learnt in the lessons today you will be building a very simple version of this type of text game.
+# Use the flow chart linked here to create the game logic.
+# Once you've completed the project, you can always extend the game and make it more interesting!
+# Demo: https://appbrewery.github.io/python-day3-demo/
+
 print(r'''
 *******************************************************************************
           |                   |                  |                     |
@@ -23,24 +28,20 @@ ____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
 print("Welcome to Treasure Island.")
 print("Your mission is to find the treasure.")
 
-choice1 = input("Are you going to left or right? (left / right)").lower()
-if choice1 == "left":
-    choice2 = input("You reached a big river. Are you going to swim or wait for the boat? (swim / wait)")
-    if choice2 == "wait":
-        choice3 = input("You reached old building. You need to pick which room you are going to- red, blue or yellow? (red / blue / yellow)")
-        if choice3 == "yellow":
-            print("YOU WIN! You found the long lost Lick King's Frostmourne runeblade!")
-        elif choice3 == "red":
-            print("YOU LOST! A fire trap has been activated.")
-        elif choice3 == "blue":
-            print("YOU LOST! The door closed automatically and you were not able to open it, beasts attacked you.")
+decision1 = input("You reached a crossroad. Ar you going Left or Right? ").lower()
+if decision1 == "left":
+    decision2 = input("You reached a small dock. How are you going to reach the other end? Are you going to Wait or Swim? ").lower()
+    if decision2 == "wait":
+        decision3 = input("You entered old house. There are 3 doors? Are you going trough Red, Blue or Yellow? ").lower()
+        if decision3 == "yellow":
+            print("Good Good Good Good Good Good! You found the treasure! YOU WIN !")
+        elif decision3 == "red":
+            print("You were burned alive by the fire! GAME OVER !")
+        elif decision3 == "blue":
+            print("You were eaten by beasts ! GAME OVER!")
         else:
-            print("You picked a fourth door, never ever seen before, but you were never ever seen again too.")
-    elif choice2 == "swim":
-        print("YOU LOST! You were attacked by trout.")
+            print("You chose the only option that does not exist and you broke the space and time continuum! GAME OVER!")
     else:
-        print("You just got bored of the adventure and went back home.")
-elif choice1 == "right":
-    print("YOU LOST! You feel in a hidden hole.")
+        print("You were attacked by trout! GAME OVER !")
 else:
-    print("You dont like making an obvious decisions, that's why you just chosen to continue ahead, nor left, nor right- somehow you found Orgrimar.")
+    print("You fell into a gole! GAME OVER !")
