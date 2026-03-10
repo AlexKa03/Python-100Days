@@ -1,3 +1,5 @@
+# Demo: https://appbrewery.github.io/python-day9-demo/
+
 import art
 
 # TODO-1: Ask the user for input
